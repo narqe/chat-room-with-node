@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const authRoutes = require('./routes/authRoutes')
 const corsOptions = {
-  origin: 'http://localhost:3000' || 'http://localhost:3001' ,
+  origin: 'http://localhost:3001' ,
   credentials: true,
   optionSuccessStatus: 200,
 }
@@ -94,7 +94,7 @@ io.on('connection', (socket) => {
         socket.emit('output-messages', result)
     })
   })
-  socket.on('disconnect', () => {
+  socket.on('bye', () => {
     const user = removeUser(socket.io)
   })
 });
