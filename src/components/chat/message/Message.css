@@ -1,0 +1,66 @@
+.sentbyme, .sentbyother {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 11px 0px #c5c5c5;
+    animation: bounce-in 1s 1;
+    -webkit-animation: bounce-in 1s 1;
+}
+
+.sentbyme {
+    background: #c7c7c7;
+    color: #383838;
+    transform-origin: right bottom;
+    -webkit-transform-origin: right bottom;
+}
+
+.sentbyother {
+    background: #426fef;
+    color: #f5f5f5;
+    transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+}
+
+.sentbyother:after,
+.sentbyme:after {
+    content: '';
+    position: absolute;
+    top: 97%;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+.sentbyme:after {
+    right: 0%;
+    border-left: 30px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 12px solid #c7c7c7;
+}
+
+.sentbyother:after {
+    left: 0%;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 12px solid #426fef;
+}
+
+
+@keyframes bounce-in {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes bounce-in {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

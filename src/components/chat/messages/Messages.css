@@ -1,0 +1,10 @@
+.chat-container {
+    margin: 0 auto;
+    height: 400px;
+    display: block;
+    overflow: scroll;
+    border: 1px solid #d4d4d454;
+    box-shadow: 6px 5px 9px 0px #e2e2e2;
+    border-radius: 4px;
+    padding: 20px;
+}
